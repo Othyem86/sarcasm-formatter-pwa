@@ -1,0 +1,93 @@
+﻿@page "/"
+@using System.Text
+@using System.Text.RegularExpressions
+
+<section class="user-input-container">
+    <form>
+        <textarea id="user-input" placeholder="Insert the text you wish to format!" @bind="Input" @bind:event="oninput"/>
+    </form>
+    <form>
+        <textarea id="result" placeholder="FoRmAtTeD ReSuLt" readonly @bind="FormattedString"/>
+    </form>
+</section>
+<section class="button-container">
+    <form>
+        <input type="checkbox" id="checkLowerCase" @bind="StartLowerCase" @bind:event="oninput">
+        <label for="checkLowerCase">Start with lower case</label>
+    </form>
+</section>
+
+@code
+{
+    private static readonly Regex ValidCharsRegex= new Regex(@"[^\s\d\W]");
+
+    private string _input;
+    private bool _startLowerCase;
+
+    [Parameter]
+    public bool StartLowerCase
+    {
+        get => _startLowerCase;
+        set
+        {
+            _startLowerCase = value;
+            AlternateStringCase();
+        }
+    }
+
+    [Parameter]
+    public string Input
+    {
+        get => _input;
+        set
+        {
+            _input = value;
+            AlternateStringCase();
+        }
+    }
+
+    public string FormattedString { get; private set; }
+
+    void AlternateStringCase()
+    {
+        if (Input == null)
+        {
+            FormattedString = string.Empty;
+            return;
+        }
+
+        var inputString = Input;
+        var str = new StringBuilder();
+        var lowerCase = StartLowerCase;
+
+        for (var i = 0; i < inputString.Length; i++)
+        {
+            if (ValidCharsRegex.IsMatch(inputString[i].ToString()))
+            {
+                if (Char.ToLowerInvariant(inputString[i]) == 'i')
+                {
+                    str.Append('i');
+                }
+                else if (Char.ToLowerInvariant(inputString[i]) == 'l')
+                {
+                    str.Append('L');
+                }
+                else if (!lowerCase)
+                {
+                    str.Append(Char.ToUpperInvariant(inputString[i]));
+                    lowerCase = true;
+                }
+                else
+                {
+                    str.Append(Char.ToLowerInvariant(inputString[i]));
+                    lowerCase = false;
+                }
+            }
+            else
+            {
+                str.Append(inputString[i]);
+            }
+        }
+        FormattedString =  str.ToString();
+    }
+}

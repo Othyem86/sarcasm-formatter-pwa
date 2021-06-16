@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\bin\Release\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\obj\Release\net5.0\scopedcss\bundle\" />
+</StaticWebAssets>
