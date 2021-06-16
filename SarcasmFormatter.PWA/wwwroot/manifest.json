@@ -1,6 +1,6 @@
 {
-  "name": "SarcasmFormatter.PWA",
-  "short_name": "SarcasmFormatter.PWA",
+  "name": "Sarcasm Formatter",
+  "short_name": "Sarcasm Formatter",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
