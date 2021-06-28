@@ -1577,15 +1577,15 @@
       "url": "_framework\/dotnet.5.0.7.js.gz"
     },
     {
-      "hash": "sha256-+4y1mwVxA3lRoEXtTtVRy70hQp0EU2m0TtP4eNiEzvE=",
+      "hash": "sha256-7qOmYr39RyFGRnZ\/6CfLjanywNSzKddhRrEcF05Bi1Y=",
       "url": "css\/app.css"
     },
     {
-      "hash": "sha256-HGxBRBR7gzUUWfuFnScuYdQ9IkK+gQuJv6gqw1gfgZ4=",
+      "hash": "sha256-pU0WpgFgPlQevQVxiZjHcLjpsdLUFtmhHRz6rHCuNZU=",
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-fV7lsF4SaLMROAgGl4wXuLpWqVNrQ\/5RVGEGB3sMT1U=",
+      "hash": "sha256-n9RNPL86DVuK6uTJX0u8myUwIHGopOnsBryZP7Qyjv4=",
       "url": "icon-512.png"
     },
     {
@@ -1593,7 +1593,7 @@
       "url": "img\/sarcasm-face.png"
     },
     {
-      "hash": "sha256-chmrBRanaImt+3i1RCL2ZH1l3zekToqqaDVkx\/G0bpQ=",
+      "hash": "sha256-aTuFSdBz71emcoMGSVTM504ajJbVv077\/6mNMPULj6w=",
       "url": "index.html"
     },
     {
@@ -1609,5 +1609,5 @@
       "url": "SarcasmFormatter.PWA.bundle.scp.css"
     }
   ],
-  "version": "QAy+8y06"
+  "version": "cXQUAgLI"
 };
