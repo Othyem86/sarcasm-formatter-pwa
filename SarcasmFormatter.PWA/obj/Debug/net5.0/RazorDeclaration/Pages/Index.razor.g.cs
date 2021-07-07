@@ -83,14 +83,21 @@ using SarcasmFormatter.PWA.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\Pages\Index.razor"
-using System.Text;
+#line 11 "C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\_Imports.razor"
+using SarcasmFormatter.PWA.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\Pages\Index.razor"
+using System.Text;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\Pages\Index.razor"
 using System.Text.RegularExpressions;
 
 #line default
@@ -105,7 +112,7 @@ using System.Text.RegularExpressions;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\Pages\Index.razor"
+#line 31 "C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\Pages\Index.razor"
  
     private static readonly Regex ValidCharsRegex= new Regex(@"[^\s\d\W]");
 
@@ -134,7 +141,7 @@ using System.Text.RegularExpressions;
         }
     }
 
-    public string FormattedString { get; private set; }
+    public string FormattedString { get; private set; } = "FoRmAtTeD ReSuLt";
 
     void AlternateStringCase()
     {
@@ -155,10 +162,12 @@ using System.Text.RegularExpressions;
                 if (Char.ToLowerInvariant(inputString[i]) == 'i')
                 {
                     str.Append('i');
+                    lowerCase = false;
                 }
                 else if (Char.ToLowerInvariant(inputString[i]) == 'l')
                 {
                     str.Append('L');
+                    lowerCase = true;
                 }
                 else if (!lowerCase)
                 {
@@ -179,9 +188,22 @@ using System.Text.RegularExpressions;
         FormattedString =  str.ToString();
     }
 
+    async Task CopyToClipboard()
+    {
+        try
+        {
+            await ClipboardService.WriteTextAsync(FormattedString);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Cannot write text to Clipboard.");
+        }
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ClipboardService ClipboardService { get; set; }
     }
 }
 #pragma warning restore 1591

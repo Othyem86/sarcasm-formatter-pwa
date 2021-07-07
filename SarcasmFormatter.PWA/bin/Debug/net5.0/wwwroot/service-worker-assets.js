@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-01eQOQKinUe1Jsw4VFgJUqt4S0qqRvdJcdA2IXxnTKo=",
+      "hash": "sha256-DD+zfEdtZfSRNbI\/M7ryJkTi4FaNfSrTsVS9kH5optw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -785,11 +785,11 @@
       "url": "_framework\/dotnet.5.0.7.js"
     },
     {
-      "hash": "sha256-AyVRIEuXeg7f8OvzSsxw\/CfDDB04BUYIbfRUBMPp1eo=",
+      "hash": "sha256-Mah+ip\/pR6OcujXakfFIo4QeZI8L\/wohuQ2d+z54RCc=",
       "url": "_framework\/SarcasmFormatter.PWA.dll"
     },
     {
-      "hash": "sha256-EHwjOFbGjXGAweb5pIv4A4BGGWKLFBUI+4gVAQzcv88=",
+      "hash": "sha256-PcP4ZTJe7d\/JHybfASSbwre2p50Fy1KReYzNF1OdPqE=",
       "url": "_framework\/SarcasmFormatter.PWA.pdb"
     },
     {
@@ -1577,7 +1577,7 @@
       "url": "_framework\/dotnet.5.0.7.js.gz"
     },
     {
-      "hash": "sha256-7qOmYr39RyFGRnZ\/6CfLjanywNSzKddhRrEcF05Bi1Y=",
+      "hash": "sha256-WGc6mVDGYPv5e8rHY2dNGYlKg8S9RXAJJPVNvSkvNeA=",
       "url": "css\/app.css"
     },
     {
@@ -1589,11 +1589,11 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-qXvB26fanrKLeYuFAFIAIEU7glA0IfFFpvkmgc2WIiQ=",
+      "hash": "sha256-Iav6i8YgoeurqajnitqSJDWpLWn8k4UWRRKyzIJ0DXc=",
       "url": "img\/sarcasm-face.png"
     },
     {
-      "hash": "sha256-aTuFSdBz71emcoMGSVTM504ajJbVv077\/6mNMPULj6w=",
+      "hash": "sha256-pfYwsafLr50FR78b3vAD\/l2w2fy7L4lfpx6IJ\/Wa6H0=",
       "url": "index.html"
     },
     {
@@ -1609,5 +1609,5 @@
       "url": "SarcasmFormatter.PWA.bundle.scp.css"
     }
   ],
-  "version": "cXQUAgLI"
+  "version": "yNjs9uU1"
 };

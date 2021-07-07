@@ -79,6 +79,13 @@ using SarcasmFormatter.PWA.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\repos\SarcasmFormatter.PWA\SarcasmFormatter.PWA\_Imports.razor"
+using SarcasmFormatter.PWA.Services;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998

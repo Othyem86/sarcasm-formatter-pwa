@@ -1,20 +1,30 @@
 ﻿@page "/"
+@inject ClipboardService ClipboardService
 @using System.Text
 @using System.Text.RegularExpressions
 
 <section class="user-input-container">
     <form>
-        <textarea id="user-input" placeholder="Insert the text you wish to format!" @bind="Input" @bind:event="oninput"/>
+        <textarea id="user-input" 
+                  placeholder="Insert the text you wish to format!" 
+                  @bind="Input" 
+                  @bind:event="oninput"/>
     </form>
     <form>
-        <textarea id="result" placeholder="FoRmAtTeD ReSuLt" readonly @bind="FormattedString"/>
+        <textarea id="result" 
+                  readonly 
+                  @bind="FormattedString"/>
     </form>
 </section>
 <section class="button-container">
     <form>
-        <input type="checkbox" id="checkLowerCase" @bind="StartLowerCase" @bind:event="oninput">
+        <input type="checkbox" 
+               id="checkLowerCase" 
+               @bind="StartLowerCase"
+               @bind:event="oninput">
         <label for="checkLowerCase">Start with lower case</label>
     </form>
+    <button class="cta-generate" @onclick="CopyToClipboard">Copy to clipboard</button>
 </section>
 
 @code
@@ -46,7 +56,7 @@
         }
     }
 
-    public string FormattedString { get; private set; }
+    public string FormattedString { get; private set; } = "FoRmAtTeD ReSuLt";
 
     void AlternateStringCase()
     {
@@ -67,10 +77,12 @@
                 if (Char.ToLowerInvariant(inputString[i]) == 'i')
                 {
                     str.Append('i');
+                    lowerCase = false;
                 }
                 else if (Char.ToLowerInvariant(inputString[i]) == 'l')
                 {
                     str.Append('L');
+                    lowerCase = true;
                 }
                 else if (!lowerCase)
                 {
@@ -89,5 +101,17 @@
             }
         }
         FormattedString =  str.ToString();
+    }
+
+    async Task CopyToClipboard()
+    {
+        try
+        {
+            await ClipboardService.WriteTextAsync(FormattedString);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Cannot write text to Clipboard.");
+        }
     }
 }

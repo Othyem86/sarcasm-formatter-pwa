@@ -27,8 +27,10 @@ h1 {
 }
 
 .header-image {
-    height: 8vh;
+    height: 60px;
     border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -47,6 +49,8 @@ section {
 
 .button-container {
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 textarea {
@@ -77,19 +81,26 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column;
-}
-
 .cta-generate {
-    border: none;
-    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    background-color: white;
     margin: 20px;
-    width: 150px;
+    width: 210px;
     height: 50px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    color: cornflowerblue;
+}
+
+.cta-generate:hover {
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.cta-generate:active {
+    border: none;
+    background-color: lightskyblue;
     color: white;
 }
 
